@@ -7,11 +7,13 @@
 </summary>
 
 ```bash
-@article{xu2023multimodal,
-  title={Multimodal Optimal Transport-based Co-Attention Transformer with Global Structure Consistency for Survival Prediction},
-  author={Xu, Yingxue and Chen, Hao},
-  journal={arXiv preprint arXiv:2306.08330},
-  year={2023}
+@InProceedings{Xu_2023_ICCV,
+    author    = {Xu, Yingxue and Chen, Hao},
+    title     = {Multimodal Optimal Transport-based Co-Attention Transformer with Global Structure Consistency for Survival Prediction},
+    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+    month     = {October},
+    year      = {2023},
+    pages     = {21241-21251}
 }
 ```
 </details>
@@ -77,11 +79,13 @@ Huge thanks to the authors of following open-source projects:
 ## License & Citation 
 If you find our work useful in your research, please consider citing our paper at:
 ```bash
-@article{xu2023multimodal,
-  title={Multimodal Optimal Transport-based Co-Attention Transformer with Global Structure Consistency for Survival Prediction},
-  author={Xu, Yingxue and Chen, Hao},
-  journal={arXiv preprint arXiv:2306.08330},
-  year={2023}
+@InProceedings{Xu_2023_ICCV,
+    author    = {Xu, Yingxue and Chen, Hao},
+    title     = {Multimodal Optimal Transport-based Co-Attention Transformer with Global Structure Consistency for Survival Prediction},
+    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+    month     = {October},
+    year      = {2023},
+    pages     = {21241-21251}
 }
 ```
 This code is available for non-commercial academic purposes. If you have any question, feel free to email [Yingxue XU](https://innse.github.io/).
