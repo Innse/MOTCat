@@ -3,6 +3,7 @@
 <summary>
   <b>Multimodal Optimal Transport-based Co-Attention Transformer with Global Structure Consistency for Survival Prediction</b>, ICCV 2023.
   <a href="https://arxiv.org/abs/2306.08330" target="blank">[arxiv]</a>
+  <a href="https://openaccess.thecvf.com/content/ICCV2023/papers/Xu_Multimodal_Optimal_Transport-based_Co-Attention_Transformer_with_Global_Structure_Consistency_for_ICCV_2023_paper.pdf" target="blank">[paper]</a>
   <br><em>Yingxue Xu, Hao Chen</em></br>
 </summary>
 
