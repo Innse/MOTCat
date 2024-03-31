@@ -23,13 +23,17 @@
 
 <img src="imgs/overview.png" width="1500px" align="center" />
 
-### Pre-requisites:
+### News
+- [01/04/2024] Upgraded OT module to its <font color="red"> GPU version </font>, which allows larger Micro-Batch or the removal of Micro-Batch setting. The <font color="red"> Pre-requisites </font> have been updated accordingly. In this case, we have set it to <font color="red">16384</font>, resulting in  <font color="red">notably accelerated</font> training speed. Based on the preliminary validation, the performance is consistent with the previous version. We will report the updated results soon.
+
+### Pre-requisites (<font color="red">new!!</font>):
 ```bash
-pot==0.8.2 (important!!!)
-torch 1.12.0+cu113
-scikit-survival 0.17.2
+python==3.9.19
+pot==0.9.3
+torch==2.2.1
+torchvision==0.17.1
+scikit-survival==0.22.2
 ```
-We found there may be bugs in POT package after version 0.8.2. So please make sure you use the version 0.8.2 or the previous 0.7.x version. Otherwise, it may not work.
 ### Prepare your data
 #### WSIs
 1. Download diagnostic WSIs from [TCGA](https://portal.gdc.cancer.gov/)

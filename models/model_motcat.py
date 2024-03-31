@@ -45,15 +45,15 @@ class OT_Attn_assem(nn.Module):
             return flow, dist
         
         elif self.impl == "pot-uot-l2":
-            a, b = ot.unif(weight1.size()[0]).astype('float64'), ot.unif(weight2.size()[0]).astype('float64')
+            a, b = torch.from_numpy(ot.unif(weight1.size()[0]).astype('float64')).to(weight1.device), torch.from_numpy(ot.unif(weight2.size()[0]).astype('float64')).to(weight2.device)
             self.cost_map = torch.cdist(weight1, weight2)**2 # (N, M)
             
             cost_map_detach = self.cost_map.detach()
             M_cost = cost_map_detach/cost_map_detach.max()
             
             flow = ot.unbalanced.sinkhorn_knopp_unbalanced(a=a, b=b, 
-                                M=M_cost.double().cpu().numpy(), reg=self.ot_reg,reg_m=self.ot_tau)
-            flow = torch.from_numpy(flow).type(torch.FloatTensor).cuda()
+                                M=M_cost.double(), reg=self.ot_reg,reg_m=self.ot_tau)
+            flow = flow.type(torch.FloatTensor).cuda()
             
             dist = self.cost_map * flow # (N, M)
             dist = torch.sum(dist) # (1,) float
