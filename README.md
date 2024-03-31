@@ -24,11 +24,9 @@
 <img src="imgs/overview.png" width="1500px" align="center" />
 
 ### News
-<ul>
-<li> [01/04/2024] Upgraded OT module to its <span style="color: red;"> GPU version </span>, which allows larger Micro-Batch or the removal of Micro-Batch setting. The <span style="color: red;"> Pre-requisites </span> have been updated accordingly. In this case, we have set it to <span style="color: red;">16384</span>, resulting in  <span style="color: red;">notably accelerated</span> training speed. Based on the preliminary validation, the performance is consistent with the previous version. We will report the updated results soon. </li>
-</ul>
+- [01/04/2024] Upgraded OT module to its **GPU version**, which allows larger **Micro-Batch** or the removal of Micro-Batch setting. The  **Pre-requisites** have been updated accordingly. In this case, we have set it to **16384**, resulting in  **notably accelerated** training speed. Based on the preliminary validation, the performance is consistent with the previous version. We will report the updated results soon.
 
-### Pre-requisites (<span style="color: red;">new!!</span>):
+### Pre-requisites (new!!):
 ```bash
 python==3.9.19
 pot==0.9.3
