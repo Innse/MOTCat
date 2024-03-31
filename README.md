@@ -27,6 +27,7 @@
 <ul>
 <li> [01/04/2024] Upgraded OT module to its <font color="red"> GPU version </font>, which allows larger Micro-Batch or the removal of Micro-Batch setting. The <font color="red"> Pre-requisites </font> have been updated accordingly. In this case, we have set it to <font color="red">16384</font>, resulting in  <font color="red">notably accelerated</font> training speed. Based on the preliminary validation, the performance is consistent with the previous version. We will report the updated results soon. </li>
 </ul>
+
 ### Pre-requisites (<font color="red">new!!</font>):
 ```bash
 python==3.9.19
