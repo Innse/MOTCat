@@ -25,10 +25,10 @@
 
 ### News
 <ul>
-<li> [01/04/2024] Upgraded OT module to its <font color="red"> GPU version </font>, which allows larger Micro-Batch or the removal of Micro-Batch setting. The <font color="red"> Pre-requisites </font> have been updated accordingly. In this case, we have set it to <font color="red">16384</font>, resulting in  <font color="red">notably accelerated</font> training speed. Based on the preliminary validation, the performance is consistent with the previous version. We will report the updated results soon. </li>
+<li> [01/04/2024] Upgraded OT module to its <span style="color: red;"> GPU version </span>, which allows larger Micro-Batch or the removal of Micro-Batch setting. The <span style="color: red;"> Pre-requisites </span> have been updated accordingly. In this case, we have set it to <span style="color: red;">16384</span>, resulting in  <span style="color: red;">notably accelerated</span> training speed. Based on the preliminary validation, the performance is consistent with the previous version. We will report the updated results soon. </li>
 </ul>
 
-### Pre-requisites (<font color="red">new!!</font>):
+### Pre-requisites (<span style="color: red;">new!!</span>):
 ```bash
 python==3.9.19
 pot==0.9.3
