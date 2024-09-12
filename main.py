@@ -98,10 +98,12 @@ parser.add_argument('--early_stopping',  action='store_true',
                     default=False, help='Enable early stopping')
 
 ### MOTCat Parameters
-parser.add_argument('--bs_micro',      type=int, default=256,
-                    help='The Size of Micro-batch (Default: 256)') ### new
+parser.add_argument('--use_micro_batch', action='store_true',
+                    default=False, help='Enable micro-batching')
+parser.add_argument('--bs_micro',      type=int, default=16384,
+                    help='The Size of Micro-batch (Default: 16384)')
 parser.add_argument('--ot_impl', 			 type=str, default='pot-uot-l2',
-                    help='impl of ot (default: pot-uot-l2)') ### new
+                    help='impl of ot (default: pot-uot-l2)')
 parser.add_argument('--ot_reg', 			 type=float, default=0.1,
                     help='epsilon of OT (default: 0.1)')
 parser.add_argument('--ot_tau', 			 type=float, default=0.5,

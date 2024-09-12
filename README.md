@@ -24,7 +24,8 @@
 <img src="imgs/overview.png" width="1500px" align="center" />
 
 ### News
-- [01/04/2024] Upgraded OT module to its **GPU version**, which allows larger **Micro-Batch** or the removal of Micro-Batch setting. The  **Pre-requisites** have been updated accordingly. In this case, we have set it to **16384**, resulting in  **notably accelerated** training speed. Based on the preliminary validation, the performance is consistent with the previous version. We will report the updated results soon.
+- [09/2024] add an optional argument `--use_micro_batch` to enable the Micro-Batch setting. The default value is `False`. If you want to use it, please set it to `True` and specify the batch size for Micro-Batch with `--bs_micro`.
+- [04/2024] Upgraded OT module to its **GPU version**, which allows larger **Micro-Batch** or the removal of Micro-Batch setting. The  **Pre-requisites** have been updated accordingly. In this case, we have set it to **16384** by default, resulting in  **notably accelerated** training speed.
 
 ### Pre-requisites (new!!):
 ```bash

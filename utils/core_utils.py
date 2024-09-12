@@ -210,9 +210,14 @@ def train(datasets: tuple, cur: int, args: Namespace):
                 train_loop_survival_coattn(epoch, model, train_loader, optimizer, args.n_classes, writer, loss_fn, reg_fn, args.lambda_reg, args.gc, args)
                 val_latest, c_index_val, stop = validate_survival_coattn(cur, epoch, model, val_loader, args.n_classes, early_stopping, monitor_cindex, writer, loss_fn, reg_fn, args.lambda_reg, args.results_dir, args)
             elif args.model_type == 'motcat':
-                from trainer.mb_trainer import train_loop_survival_coattn_mb, validate_survival_coattn_mb
-                train_loop_survival_coattn_mb(epoch, args.bs_micro, model, train_loader, optimizer, args.n_classes, writer, loss_fn, reg_fn, args.lambda_reg, args.gc, args)
-                val_latest, c_index_val, stop = validate_survival_coattn_mb(cur, epoch, args.bs_micro, model, val_loader, args.n_classes, early_stopping, monitor_cindex, writer, loss_fn, reg_fn, args.lambda_reg, args.results_dir, args)
+                if args.use_micro_batch:
+                    from trainer.mb_trainer import train_loop_survival_coattn_mb, validate_survival_coattn_mb
+                    train_loop_survival_coattn_mb(epoch, args.bs_micro, model, train_loader, optimizer, args.n_classes, writer, loss_fn, reg_fn, args.lambda_reg, args.gc, args)
+                    val_latest, c_index_val, stop = validate_survival_coattn_mb(cur, epoch, args.bs_micro, model, val_loader, args.n_classes, early_stopping, monitor_cindex, writer, loss_fn, reg_fn, args.lambda_reg, args.results_dir, args)
+                else:
+                    from trainer.coattn_trainer import train_loop_survival_coattn, validate_survival_coattn
+                    train_loop_survival_coattn(epoch, model, train_loader, optimizer, args.n_classes, writer, loss_fn, reg_fn, args.lambda_reg, args.gc, args)
+                    val_latest, c_index_val, stop = validate_survival_coattn(cur, epoch, model, val_loader, args.n_classes, early_stopping, monitor_cindex, writer, loss_fn, reg_fn, args.lambda_reg, args.results_dir, args)
             else:
                 raise NotImplementedError
         else:
